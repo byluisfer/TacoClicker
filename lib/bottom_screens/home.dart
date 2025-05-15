@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bounceable/flutter_bounceable.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,12 +38,11 @@ class TacoClick extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 80),
-            InkWell(
+
+            Bounceable(
               onTap: _incrementClickCount,
+              duration: const Duration(milliseconds: 100),
               child: Image.asset('assets/Taco_No_Background.png', height: 380),
-              hoverColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              highlightColor: Colors.transparent,
             ),
           ],
         ),

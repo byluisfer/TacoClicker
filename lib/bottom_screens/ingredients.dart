@@ -47,7 +47,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+1 click per click',
+                          '+1 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -107,7 +107,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+5 click per click',
+                          '+5 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -167,7 +167,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+10 click per click',
+                          '+10 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -227,7 +227,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+50 click per click',
+                          '+50 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -287,7 +287,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+100 click per click',
+                          '+100 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -347,7 +347,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+500 click per click',
+                          '+500 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,

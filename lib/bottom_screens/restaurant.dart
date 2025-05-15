@@ -17,6 +17,15 @@ class RestaurantUpgrade extends State<RestuarantScreen> {
           child: Column(
             children: [
               SizedBox(height: 60),
+              Text(
+                "Restaurant",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 20),
               Container(
                 padding: const EdgeInsets.all(14),
                 width: 360,

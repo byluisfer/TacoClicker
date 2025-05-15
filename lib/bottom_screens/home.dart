@@ -22,20 +22,21 @@ class TacoClick extends State<HomeScreen> {
       color: Colors.orangeAccent,
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 30),
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: Colors.orange,
                 borderRadius: BorderRadius.all(Radius.circular(40)),
               ),
+
               child: Text(
                 '$count Tacos',
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
-            SizedBox(height: 80),
+            SizedBox(height: 40),
             InkWell(
               onTap: _incrementClickCount,
               child: Image.asset('assets/Taco_No_Background.png', height: 380),

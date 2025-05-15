@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
   @override
+  State<SettingsScreen> createState() => Settings();
+}
+
+class Settings extends State<SettingsScreen> {
+  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('SETTINGS', style: TextStyle(fontSize: 40)),
-    );
+    return Container(color: Colors.orangeAccent);
   }
 }

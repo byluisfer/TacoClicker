@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-class RestuarantScreen extends StatelessWidget {
+class RestuarantScreen extends StatefulWidget {
   const RestuarantScreen({super.key});
 
   @override
+  State<RestuarantScreen> createState() => RestaurantUpgrade();
+}
+
+class RestaurantUpgrade extends State<RestuarantScreen> {
+  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('RESTAURANT', style: TextStyle(fontSize: 40)),
-    );
+    return Container(color: Colors.orangeAccent);
   }
 }

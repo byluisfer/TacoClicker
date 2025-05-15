@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
-class IngredientsScreen extends StatelessWidget {
+class IngredientsScreen extends StatefulWidget {
   const IngredientsScreen({super.key});
 
   @override
+  State<IngredientsScreen> createState() => IngredientsUpgrade();
+}
+
+class IngredientsUpgrade extends State<IngredientsScreen> {
+  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('INGREDIENTS', style: TextStyle(fontSize: 40)),
-    );
+    return Container(color: Colors.orangeAccent);
   }
 }

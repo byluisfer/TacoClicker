@@ -23,9 +23,9 @@ class TacoClick extends State<HomeScreen> {
       child: Center(
         child: Column(
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 60),
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.orange,
                 borderRadius: BorderRadius.all(Radius.circular(40)),
@@ -36,7 +36,7 @@ class TacoClick extends State<HomeScreen> {
                 style: TextStyle(color: Colors.white, fontSize: 24),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 80),
             InkWell(
               onTap: _incrementClickCount,
               child: Image.asset('assets/Taco_No_Background.png', height: 380),

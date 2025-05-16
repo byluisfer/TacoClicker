@@ -68,7 +68,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(1);
+                        IngredientUpgrade().applyUpgrade(1, 50);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
@@ -130,7 +130,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(5);
+                        IngredientUpgrade().applyUpgrade(5, 250);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
@@ -192,7 +192,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(10);
+                        IngredientUpgrade().applyUpgrade(10, 500);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
@@ -254,7 +254,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(50);
+                        IngredientUpgrade().applyUpgrade(50, 1000);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
@@ -316,7 +316,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(100);
+                        IngredientUpgrade().applyUpgrade(100, 5000);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
@@ -378,7 +378,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        IngredientUpgrade().applyUpgrade(250);
+                        IngredientUpgrade().applyUpgrade(250, 10000);
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),

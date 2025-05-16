@@ -11,7 +11,6 @@ class IngredientUpgrade {
 
   int initialClickValue = 1;
   int clickMultiplier = 1;
-  int multiplierPrice = 50;
   int get clickValue => initialClickValue * clickMultiplier;
 
   Future<int> getCounter() async {
@@ -19,12 +18,23 @@ class IngredientUpgrade {
     return prefs.getInt('counter') ?? 0;
   }
 
-  void applyUpgrade(int increaseClick) async {
-    final currentCount = await getCounter();
-    if (currentCount >= multiplierPrice) {
+  void resetGameData() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('counter', 0);
+  }
+
+  void applyUpgrade(int increaseClick, int priceUpgrade) async {
+    final prefs = await SharedPreferences.getInstance();
+    int currentCounter = prefs.getInt('counter') ?? 0;
+    //print("Now you have this tacos: $currentCounter");
+
+    if (currentCounter >= priceUpgrade) {
+      currentCounter -= priceUpgrade;
+      await prefs.setInt('counter', currentCounter);
       clickMultiplier += increaseClick;
+      //print("You buy it! Now you have $currentCounter tacos.");
     } else {
-      print("Pobreee: $currentCount");
+      //print("You can't buy this, you only have $currentCounter tacos. Looser");
     }
   }
 }

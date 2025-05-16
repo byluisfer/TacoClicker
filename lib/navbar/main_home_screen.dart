@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../bottom_screens/home.dart';
-import '../bottom_screens/ingredients.dart';
-import '../bottom_screens/restaurant.dart';
-import '../bottom_screens/settings.dart';
+import '../pages/home.dart';
+import '../pages/ingredients.dart';
+import '../pages/settings.dart';
 
 class MainHomeScreen extends StatefulWidget {
   @override
@@ -16,7 +15,6 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   final List<Widget> widgetOptions = const [
     HomeScreen(),
     IngredientsScreen(),
-    RestuarantScreen(),
     SettingsScreen(),
   ];
 
@@ -41,10 +39,6 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.food_bank),
             label: 'Ingredients',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.restaurant),
-            label: 'Restaurant',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),

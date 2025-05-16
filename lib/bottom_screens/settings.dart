@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -8,6 +9,11 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class Settings extends State<SettingsScreen> {
+  void resetGameData() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('counter', 0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -138,6 +144,44 @@ class Settings extends State<SettingsScreen> {
                             ),
                           ),
                         ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 16),
+
+            Container(
+              padding: const EdgeInsets.all(14),
+              width: 360,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          resetGameData();
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          padding: EdgeInsets.symmetric(
+                            horizontal: 40,
+                            vertical: 10,
+                          ),
+                        ),
+                        child: Text(
+                          'Reset Game Progress',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                        ),
                       ),
                     ],
                   ),

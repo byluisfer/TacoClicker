@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../upgrades/ingredientsUpgrade.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,7 +29,7 @@ class TacoClick extends State<HomeScreen> {
   Future<void> _incrementClickCount() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      count = (prefs.getInt('counter') ?? 0) + 1;
+      count += IngredientUpgrade().clickValue;
       prefs.setInt('counter', count);
     });
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../upgrades/ingredientsUpgrade.dart';
 
 class IngredientsScreen extends StatefulWidget {
   const IngredientsScreen({super.key});
@@ -66,7 +67,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(1);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(
@@ -126,7 +129,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(5);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(
@@ -186,7 +191,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(10);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(
@@ -246,7 +253,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(50);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(
@@ -306,7 +315,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(100);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(
@@ -356,7 +367,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          '+500 tacos per click',
+                          '+250 tacos per click',
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -366,7 +377,9 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       ],
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        IngredientUpgrade().applyUpgrade(250);
+                      },
                       style: TextButton.styleFrom(
                         backgroundColor: const Color.fromARGB(26, 63, 63, 63),
                         padding: const EdgeInsets.symmetric(

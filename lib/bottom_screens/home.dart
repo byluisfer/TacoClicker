@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,9 +12,24 @@ class HomeScreen extends StatefulWidget {
 class TacoClick extends State<HomeScreen> {
   int count = 0;
 
-  void _incrementClickCount() {
+  @override
+  void initState() {
+    super.initState();
+    _loadCounter();
+  }
+
+  Future<void> _loadCounter() async {
+    final prefs = await SharedPreferences.getInstance();
     setState(() {
-      count += 1;
+      count = (prefs.getInt('counter') ?? 0);
+    });
+  }
+
+  Future<void> _incrementClickCount() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      count = (prefs.getInt('counter') ?? 0) + 1;
+      prefs.setInt('counter', count);
     });
   }
 

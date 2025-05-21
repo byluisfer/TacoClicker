@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:provider/provider.dart';
 import '../theme_notifier.dart';
+import '../upgrades/ingredientsUpgrade.dart';
 
 final AudioPlayer backgroundPlayer = AudioPlayer();
 
@@ -39,7 +40,8 @@ class Settings extends State<SettingsScreen> {
 
   void resetGameData() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('counter', 0);
+    await prefs.setInt('counter', 0); // Delete all tacos counter
+    IngredientUpgrade().clickMultiplier = 1; // Set the upgrades to 1
   }
 
   @override

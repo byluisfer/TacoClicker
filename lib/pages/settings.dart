@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:provider/provider.dart';
+import '../theme_notifier.dart';
 
 final AudioPlayer backgroundPlayer = AudioPlayer();
 
@@ -43,7 +45,7 @@ class Settings extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orangeAccent,
+      color: Theme.of(context).colorScheme.secondary,
       child: Center(
         child: Column(
           children: [
@@ -53,7 +55,7 @@ class Settings extends State<SettingsScreen> {
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.onPrimary,
               ),
             ),
             SizedBox(height: 20),
@@ -61,7 +63,7 @@ class Settings extends State<SettingsScreen> {
               padding: const EdgeInsets.all(14),
               width: 360,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.onPrimary,
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
 
@@ -74,7 +76,7 @@ class Settings extends State<SettingsScreen> {
                       Text(
                         'Stats',
                         style: TextStyle(
-                          color: Colors.orange,
+                          color: Theme.of(context).primaryColor,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
@@ -86,7 +88,7 @@ class Settings extends State<SettingsScreen> {
                           Container(
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: Colors.orangeAccent,
+                              color: Theme.of(context).primaryColor,
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Column(
@@ -95,7 +97,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   'Max amount',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -103,7 +106,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   '0',
                                   style: TextStyle(
-                                    color: Colors.brown,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -115,7 +119,7 @@ class Settings extends State<SettingsScreen> {
                           Container(
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: Colors.orangeAccent,
+                              color: Theme.of(context).primaryColor,
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Column(
@@ -124,7 +128,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   'Per click',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -132,7 +137,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   '0',
                                   style: TextStyle(
-                                    color: Colors.brown,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -144,7 +150,7 @@ class Settings extends State<SettingsScreen> {
                           Container(
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: Colors.orangeAccent,
+                              color: Theme.of(context).primaryColor,
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Column(
@@ -153,7 +159,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   'Per second',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -161,7 +168,8 @@ class Settings extends State<SettingsScreen> {
                                 Text(
                                   '0',
                                   style: TextStyle(
-                                    color: Colors.brown,
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -183,7 +191,7 @@ class Settings extends State<SettingsScreen> {
               padding: const EdgeInsets.all(14),
               width: 360,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.onPrimary,
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
 
@@ -196,7 +204,7 @@ class Settings extends State<SettingsScreen> {
                       Text(
                         "Game Settings",
                         style: TextStyle(
-                          color: Colors.orange,
+                          color: Theme.of(context).colorScheme.primary,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
@@ -207,7 +215,7 @@ class Settings extends State<SettingsScreen> {
                             "Music",
                             style: TextStyle(
                               fontSize: 18,
-                              color: Colors.orange,
+                              color: Theme.of(context).colorScheme.primary,
                             ),
                           ),
                           SizedBox(width: 220),
@@ -234,7 +242,37 @@ class Settings extends State<SettingsScreen> {
                                 await backgroundPlayer.stop();
                               }
                             },
-                            activeTrackColor: Colors.orange,
+                            activeTrackColor:
+                                Theme.of(context).colorScheme.primary,
+                          ),
+                        ],
+                      ),
+
+                      Row(
+                        children: [
+                          Text(
+                            "Dark Mode",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                          SizedBox(width: 175),
+                          Switch(
+                            value:
+                                Theme.of(context).brightness == Brightness.dark,
+                            onChanged: (value) {
+                              ThemeNotifier themeNotifier =
+                                  Provider.of<ThemeNotifier>(
+                                    context,
+                                    listen: false,
+                                  );
+                              themeNotifier.setTheme(
+                                value ? ThemeMode.dark : ThemeMode.light,
+                              );
+                            },
+                            activeTrackColor:
+                                Theme.of(context).colorScheme.primary,
                           ),
                         ],
                       ),

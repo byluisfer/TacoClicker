@@ -12,7 +12,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orangeAccent,
+      color: Theme.of(context).colorScheme.secondary,
       child: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -23,7 +23,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 26,
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
               ),
               SizedBox(height: 20),
@@ -31,7 +31,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -40,11 +40,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Guacamole',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -52,7 +52,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'Smooth, creamy sauce that\ndrives customers crazy.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
@@ -93,7 +93,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -102,11 +102,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Processed Cheese',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -114,7 +114,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'Melted cheesy that adds\n comfort to every bite.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
@@ -155,7 +155,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -164,11 +164,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Roosters Beak',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -176,7 +176,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'Fresh and zesty mix that\nbrings your taco to life.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
@@ -217,7 +217,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -226,11 +226,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Caramelized Onion',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -238,7 +238,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'Sweet and savory magic that\nadds texture to your taco.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
@@ -279,7 +279,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -288,11 +288,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Wagyu Beef',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -300,7 +300,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'Exquisite beef that elevates\nyour taco to luxury status.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
@@ -341,7 +341,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                 padding: const EdgeInsets.all(14),
                 width: 360,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).colorScheme.onPrimary,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
 
@@ -350,11 +350,11 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text(
                           'Dragonfire Sauce',
                           style: TextStyle(
-                            color: Colors.orange,
+                            color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
                             fontWeight: FontWeight.bold,
                           ),
@@ -362,7 +362,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         Text(
                           'A mythical blend from spicy\npeppers and rare spices.',
                           style: TextStyle(
-                            color: Colors.orangeAccent,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),

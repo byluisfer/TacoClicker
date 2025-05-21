@@ -37,7 +37,7 @@ class TacoClick extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orangeAccent,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Center(
         child: Column(
           children: [
@@ -45,13 +45,16 @@ class TacoClick extends State<HomeScreen> {
             Container(
               padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
-                color: Colors.orange,
+                color: Theme.of(context).colorScheme.primary,
                 borderRadius: BorderRadius.all(Radius.circular(40)),
               ),
 
               child: Text(
                 '$count Tacos',
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  fontSize: 24,
+                ),
               ),
             ),
             SizedBox(height: 80),

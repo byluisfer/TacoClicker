@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:audioplayers/audioplayers.dart';
+
+final AudioPlayer backgroundPlayer = AudioPlayer();
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -9,6 +12,29 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class Settings extends State<SettingsScreen> {
+  bool isMusic = true;
+  bool isSoundEffects = true;
+
+  @override
+  void initState() {
+    super.initState();
+    initSettings();
+  }
+
+  void initSettings() async {
+    final prefs = await SharedPreferences.getInstance();
+    bool? musicPref = prefs.getBool('isMusic');
+    isMusic = musicPref ?? true; // By default in true
+
+    if (isMusic) {
+      await backgroundPlayer.setReleaseMode(ReleaseMode.loop);
+      await backgroundPlayer.setSource(AssetSource('backgroundMusic.mp3'));
+      await backgroundPlayer.resume();
+    }
+
+    setState(() {});
+  }
+
   void resetGameData() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('counter', 0);
@@ -167,6 +193,52 @@ class Settings extends State<SettingsScreen> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Text(
+                        "Game Settings",
+                        style: TextStyle(
+                          color: Colors.orange,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            "Music",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.orange,
+                            ),
+                          ),
+                          SizedBox(width: 220),
+                          Switch(
+                            value: isMusic,
+                            onChanged: (value) async {
+                              final prefs =
+                                  await SharedPreferences.getInstance();
+                              setState(() {
+                                isMusic = value;
+                              });
+                              await prefs.setBool('isMusic', isMusic);
+
+                              if (isMusic) {
+                                await backgroundPlayer.stop();
+                                await backgroundPlayer.setReleaseMode(
+                                  ReleaseMode.loop,
+                                );
+                                await backgroundPlayer.setSource(
+                                  AssetSource('backgroundMusic.mp3'),
+                                );
+                                await backgroundPlayer.resume();
+                              } else {
+                                await backgroundPlayer.stop();
+                              }
+                            },
+                            activeTrackColor: Colors.orange,
+                          ),
+                        ],
+                      ),
+
                       TextButton(
                         onPressed: () {
                           resetGameData();
@@ -174,7 +246,7 @@ class Settings extends State<SettingsScreen> {
                         style: TextButton.styleFrom(
                           backgroundColor: Colors.red,
                           padding: EdgeInsets.symmetric(
-                            horizontal: 40,
+                            horizontal: 80,
                             vertical: 10,
                           ),
                         ),

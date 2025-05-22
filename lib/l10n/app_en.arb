@@ -1,0 +1,114 @@
+{
+  "home": "Home",
+  "@home": {
+    "description": "Home navbar"
+  },
+  "ingredients": "Ingredients",
+  "@ingredients": {
+    "description": "Ingredients navbar"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings navbar"
+  },
+  "upgrade1Title": "Guacamole",
+  "@upgrade1Title": {
+    "description": "Upgrade 1 Title"
+  },
+  "upgrade1Description": "Smooth, creamy sauce that\ndrives customers crazy.",
+  "@upgrade1Description": {
+    "description": "Upgrade 1 Description"
+  },
+  "upgrade1Bonus": "+1 tacos per click",
+  "@upgrade1Bonus": {
+    "description": "Upgrade 1 Bonus"
+  },
+  "upgrade2Title": "Processed Cheese",
+  "@upgrade2Title": {
+    "description": "Upgrade 2 Title"
+  },
+  "upgrade2Description": "Melted cheesy that adds\ncomfort to every bite.",
+  "@upgrade2Description": {
+    "description": "Upgrade 2 Description"
+  },
+  "upgrade2Bonus": "+5 tacos per click",
+  "@upgrade2Bonus": {
+    "description": "Upgrade 2 Bonus"
+  },
+  "upgrade3Title": "Roosters Beak",
+  "@upgrade3Title": {
+    "description": "Upgrade 3 Title"
+  },
+  "upgrade3Description": "Fresh and zesty mix that\nbrings your taco to life.",
+  "@upgrade3Description": {
+    "description": "Upgrade 3 Description"
+  },
+  "upgrade3Bonus": "+10 tacos per click",
+  "@upgrade3Bonus": {
+    "description": "Upgrade 3 Bonus"
+  },
+  "upgrade4Title": "Caramelized Onion",
+  "@upgrade4Title": {
+    "description": "Upgrade 4 Title"
+  },
+  "upgrade4Description": "Sweet and savory magic that\nadds texture to your taco.",
+  "@upgrade4Description": {
+    "description": "Upgrade 4 Description"
+  },
+  "upgrade4Bonus": "+50 tacos per click",
+  "@upgrade4Bonus": {
+    "description": "Upgrade 4 Bonus"
+  },
+  "upgrade5Title": "Wagyu Beef",
+  "@upgrade5Title": {
+    "description": "Upgrade 5 Title"
+  },
+  "upgrade5Description": "Exquisite beef that elevates\nyour taco to luxury status.",
+  "@upgrade5Description": {
+    "description": "Upgrade 5 Description"
+  },
+  "upgrade5Bonus": "+100 tacos per click",
+  "@upgrade5Bonus": {
+    "description": "Upgrade 5 Bonus"
+  },
+  "upgrade6Title": "Dragonfire Sauce",
+  "@upgrade6Title": {
+    "description": "Upgrade 6 Title"
+  },
+  "upgrade6Description": "A mythical blend from spicy\npeppers and rare spices.",
+  "@upgrade6Description": {
+    "description": "Upgrade 6 Description"
+  },
+  "upgrade6Bonus": "+250 tacos per click",
+  "@upgrade6Bonus": {
+    "description": "Upgrade 6 Bonus"
+  },
+  "stats": "Stats",
+  "@stats": {
+    "description": "Stats title"
+  },
+  "maxAmountStats": "Max amount",
+  "@maxAmountStats": {
+    "description": "Max amount stats"
+  },
+  "perClickStats": "Per Click",
+  "@perClickStats": {
+    "description": "Per click stats"
+  },
+  "gameSettings": "Game Settings",
+  "@gameSettings": {
+    "description": "Game Settinsg title"
+  },
+  "music": "Music",
+  "@music": {
+    "description": "Music settings off/on"
+  },
+  "darkMode": "Dark mode",
+  "@darkMode": {
+    "description": "Dark mode settings off/on"
+  },
+  "restartGame": "Reset Game Progress",
+  "@restartGame": {
+    "description": "Restart game progress setings button"
+  }
+}

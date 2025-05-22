@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../upgrades/ingredientsUpgrade.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class IngredientsScreen extends StatefulWidget {
   const IngredientsScreen({super.key});
@@ -19,7 +20,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
             children: [
               SizedBox(height: 60),
               Text(
-                "Ingredients",
+                AppLocalizations.of(context)!.ingredients,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 26,
@@ -42,7 +43,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Guacamole',
+                          AppLocalizations.of(context)!.upgrade1Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -50,14 +51,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'Smooth, creamy sauce that\ndrives customers crazy.',
+                          AppLocalizations.of(context)!.upgrade1Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+1 tacos per click',
+                          AppLocalizations.of(context)!.upgrade1Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -104,7 +105,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Processed Cheese',
+                          AppLocalizations.of(context)!.upgrade2Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -112,14 +113,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'Melted cheesy that adds\n comfort to every bite.',
+                          AppLocalizations.of(context)!.upgrade2Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+5 tacos per click',
+                          AppLocalizations.of(context)!.upgrade2Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -166,7 +167,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Roosters Beak',
+                          AppLocalizations.of(context)!.upgrade3Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -174,14 +175,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'Fresh and zesty mix that\nbrings your taco to life.',
+                          AppLocalizations.of(context)!.upgrade3Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+10 tacos per click',
+                          AppLocalizations.of(context)!.upgrade3Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -228,7 +229,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Caramelized Onion',
+                          AppLocalizations.of(context)!.upgrade4Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -236,14 +237,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'Sweet and savory magic that\nadds texture to your taco.',
+                          AppLocalizations.of(context)!.upgrade4Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+50 tacos per click',
+                          AppLocalizations.of(context)!.upgrade4Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -290,7 +291,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Wagyu Beef',
+                          AppLocalizations.of(context)!.upgrade5Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -298,14 +299,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'Exquisite beef that elevates\nyour taco to luxury status.',
+                          AppLocalizations.of(context)!.upgrade5Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+100 tacos per click',
+                          AppLocalizations.of(context)!.upgrade5Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -352,7 +353,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Dragonfire Sauce',
+                          AppLocalizations.of(context)!.upgrade6Title,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.primary,
                             fontSize: 21,
@@ -360,14 +361,14 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                           ),
                         ),
                         Text(
-                          'A mythical blend from spicy\npeppers and rare spices.',
+                          AppLocalizations.of(context)!.upgrade6Description,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 17,
                           ),
                         ),
                         Text(
-                          '+250 tacos per click',
+                          AppLocalizations.of(context)!.upgrade6Bonus,
                           style: TextStyle(
                             color: Colors.green,
                             fontSize: 14,
@@ -397,6 +398,7 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                   ],
                 ),
               ),
+              SizedBox(height: 20),
             ],
           ),
         ),

@@ -4,6 +4,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:provider/provider.dart';
 import '../theme_notifier.dart';
 import '../upgrades/ingredientsUpgrade.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 final AudioPlayer backgroundPlayer = AudioPlayer();
 
@@ -53,7 +54,7 @@ class Settings extends State<SettingsScreen> {
           children: [
             SizedBox(height: 60),
             Text(
-              "Settings",
+              AppLocalizations.of(context)!.settings,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
@@ -72,7 +73,7 @@ class Settings extends State<SettingsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Stats',
+                    AppLocalizations.of(context)!.stats,
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontSize: 24,
@@ -94,7 +95,7 @@ class Settings extends State<SettingsScreen> {
                           child: Column(
                             children: [
                               Text(
-                                'Max amount',
+                                AppLocalizations.of(context)!.maxAmountStats,
                                 style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.onPrimary,
@@ -127,7 +128,7 @@ class Settings extends State<SettingsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                'Per click',
+                                AppLocalizations.of(context)!.perClickStats,
                                 style: TextStyle(
                                   color:
                                       Theme.of(context).colorScheme.onPrimary,
@@ -171,7 +172,7 @@ class Settings extends State<SettingsScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Game Settings",
+                        AppLocalizations.of(context)!.gameSettings,
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.primary,
                           fontSize: 24,
@@ -181,13 +182,13 @@ class Settings extends State<SettingsScreen> {
                       Row(
                         children: [
                           Text(
-                            "Music",
+                            AppLocalizations.of(context)!.music,
                             style: TextStyle(
                               fontSize: 18,
                               color: Theme.of(context).colorScheme.primary,
                             ),
                           ),
-                          SizedBox(width: 220),
+                          SizedBox(width: 190),
                           Switch(
                             value: isMusic,
                             onChanged: (value) async {
@@ -220,13 +221,13 @@ class Settings extends State<SettingsScreen> {
                       Row(
                         children: [
                           Text(
-                            "Dark Mode",
+                            AppLocalizations.of(context)!.darkMode,
                             style: TextStyle(
                               fontSize: 18,
                               color: Theme.of(context).colorScheme.primary,
                             ),
                           ),
-                          SizedBox(width: 175),
+                          SizedBox(width: 130),
                           Switch(
                             value:
                                 Theme.of(context).brightness == Brightness.dark,
@@ -258,7 +259,7 @@ class Settings extends State<SettingsScreen> {
                           ),
                         ),
                         child: Text(
-                          'Reset Game Progress',
+                          AppLocalizations.of(context)!.restartGame,
                           style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),

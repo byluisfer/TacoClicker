@@ -72,7 +72,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(1, 50);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,
@@ -134,7 +135,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(5, 250);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,
@@ -196,7 +198,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(10, 500);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,
@@ -258,7 +261,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(50, 1000);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,
@@ -320,7 +324,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(100, 5000);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,
@@ -382,7 +387,8 @@ class IngredientsUpgrade extends State<IngredientsScreen> {
                         IngredientUpgrade().applyUpgrade(250, 10000);
                       },
                       style: TextButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(26, 63, 63, 63),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 16,
                           vertical: 12,

@@ -6,6 +6,10 @@ import '../pages/ingredients.dart';
 import '../pages/settings.dart';
 
 class MainHomeScreen extends StatefulWidget {
+  final Function(Locale)? onLocaleChange;
+
+  const MainHomeScreen({super.key, this.onLocaleChange});
+
   @override
   _MainHomeScreenState createState() => _MainHomeScreenState();
 }
@@ -13,20 +17,14 @@ class MainHomeScreen extends StatefulWidget {
 class _MainHomeScreenState extends State<MainHomeScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> widgetOptions = const [
-    HomeScreen(),
-    IngredientsScreen(),
-    SettingsScreen(),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    final List<Widget> widgetOptions = [
+      HomeScreen(),
+      IngredientsScreen(),
+      SettingsScreen(onLocaleChange: widget.onLocaleChange),
+    ];
+
     return Scaffold(
       body: widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
@@ -50,7 +48,10 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        onTap:
+            (index) => setState(() {
+              _selectedIndex = index;
+            }),
       ),
     );
   }

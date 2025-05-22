@@ -26,5 +26,6 @@
   "gameSettings": "Ajustes de juego",
   "music": "Musica",
   "darkMode": "Modo oscuro",
-  "restartGame": "Restablecer el juego"
+  "restartGame": "Restablecer el juego",
+  "language": "Idioma"
 }

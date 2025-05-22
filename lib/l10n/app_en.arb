@@ -110,5 +110,9 @@
   "restartGame": "Reset Game Progress",
   "@restartGame": {
     "description": "Restart game progress setings button"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language setting"
   }
 }

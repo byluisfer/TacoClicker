@@ -76,10 +76,7 @@ class TacoClick extends State<HomeScreen> {
               child: Bounceable(
                 onTap: _incrementClickCount,
                 duration: const Duration(milliseconds: 100),
-                child: Image.asset(
-                  'assets/Taco_No_Background.png',
-                  fit: BoxFit.contain,
-                ),
+                child: Image.asset('assets/Taco_No_Background.png'),
               ),
             ),
           ),

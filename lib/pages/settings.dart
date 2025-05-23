@@ -114,6 +114,7 @@ class Settings extends State<SettingsScreen> {
   void resetGameData() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('counter', 0);
+    await prefs.setInt('upgrade', 1);
     IngredientUpgrade().clickMultiplier = 1;
     Navigator.of(context).pop();
   }

@@ -5,10 +5,10 @@ final ThemeData lightTheme = ThemeData(
   primaryColor: Colors.orange,
   scaffoldBackgroundColor: Colors.orangeAccent,
   colorScheme: const ColorScheme.light(
-    primary: Colors.orange, // Elementos principales
-    secondary: Colors.orangeAccent, // Acentos
-    onPrimary: Colors.white, // Texto sobre primary
-    onSecondary: Colors.black, // Texto sobre secondary
+    primary: Colors.orange,
+    secondary: Colors.orangeAccent,
+    onPrimary: Colors.white,
+    onSecondary: Colors.black,
   ),
   textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.black)),
 );

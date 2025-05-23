@@ -23,6 +23,7 @@ class TacoClick extends State<HomeScreen> {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
       count = (prefs.getInt('counter') ?? 0);
+      IngredientUpgrade().clickMultiplier = prefs.getInt('upgrade') ?? 1;
     });
   }
 

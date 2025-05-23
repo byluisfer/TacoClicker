@@ -1,17 +1,12 @@
-# taco_clicker
+# Taco Clicker 🌮
 
-A new Flutter project.
+## 1. Getting Started
 
-## Getting Started
+This project is for the modul ÜK335 Mobile-Applikation realisieren
 
-This project is a starting point for a Flutter application.
+To run this project you need to:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# TacoClicker
+1. Clone this repository: https://github.com/byluisfer/TacoClicker
+2. Go to src folder: ``` cd ./src ```
+3. Download all the dependencies: ``` flutter pub get ```
+4. And run the debuger

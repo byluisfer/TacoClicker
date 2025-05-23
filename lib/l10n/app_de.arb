@@ -27,5 +27,8 @@
   "music": "Musik",
   "darkMode": "Dunkelmodus",
   "restartGame": "Spiel zurücksetzen",
-  "language": "Sprache"
+  "language": "Sprache",
+  "yes": "Ja",
+  "no": "Nein",
+  "confirmMessage": "Sind Sie sicher?"
 }

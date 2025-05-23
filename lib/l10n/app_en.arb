@@ -114,5 +114,17 @@
   "language": "Language",
   "@language": {
     "description": "Language setting"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "Yes button text"
+  },
+  "no": "No",
+  "@no": {
+    "description": "No button text"
+  },
+  "confirmMessage": "Are you sure?",
+  "@confirmMessage": {
+    "description": "Confirmation message for pop up"
   }
 }

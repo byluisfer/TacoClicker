@@ -20,6 +20,51 @@ class Settings extends State<SettingsScreen> {
   bool isMusic = true;
   String _currentLanguageCode = 'en';
 
+  Future openDialog() => showDialog(
+    context: context,
+    builder:
+        (context) => AlertDialog(
+          title: Text(AppLocalizations.of(context)!.confirmMessage),
+          titleTextStyle: TextStyle(
+            fontSize: 22,
+            color: Theme.of(context).colorScheme.onSecondary,
+          ),
+          content: Row(
+            children: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                ),
+                child: Text(
+                  AppLocalizations.of(context)!.no,
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ),
+
+              SizedBox(width: 5),
+
+              TextButton(
+                onPressed: () {
+                  resetGameData();
+                },
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                ),
+                child: Text(
+                  AppLocalizations.of(context)!.yes,
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
+              ),
+            ],
+          ),
+        ),
+  );
+
   @override
   void initState() {
     super.initState();
@@ -61,6 +106,7 @@ class Settings extends State<SettingsScreen> {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt('counter', 0);
     IngredientUpgrade().clickMultiplier = 1;
+    Navigator.of(context).pop();
   }
 
   @override
@@ -282,9 +328,10 @@ class Settings extends State<SettingsScreen> {
                       ],
                     ),
                     SizedBox(height: 10),
+
                     TextButton(
                       onPressed: () {
-                        resetGameData();
+                        openDialog();
                       },
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.red,

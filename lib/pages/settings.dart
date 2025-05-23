@@ -19,6 +19,8 @@ class SettingsScreen extends StatefulWidget {
 class Settings extends State<SettingsScreen> {
   bool isMusic = true;
   String _currentLanguageCode = 'en';
+  int _tacosPerClick = 1;
+  int _tacos = 0;
 
   Future openDialog() => showDialog(
     context: context,
@@ -77,6 +79,13 @@ class Settings extends State<SettingsScreen> {
     isMusic = musicPref ?? true;
 
     _currentLanguageCode = prefs.getString('languageCode') ?? 'en';
+
+    _tacos = prefs.getInt('counter') ?? 0;
+
+    IngredientUpgrade().clickMultiplier = prefs.getInt('upgrade') ?? 1;
+    setState(() {
+      _tacosPerClick = IngredientUpgrade().clickValue;
+    });
 
     if (isMusic) {
       await backgroundPlayer.setReleaseMode(ReleaseMode.loop);
@@ -168,7 +177,7 @@ class Settings extends State<SettingsScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '0',
+                                  '$_tacos',
                                   style: TextStyle(
                                     color:
                                         Theme.of(context).colorScheme.onPrimary,
@@ -201,7 +210,7 @@ class Settings extends State<SettingsScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '0',
+                                  '$_tacosPerClick',
                                   style: TextStyle(
                                     color:
                                         Theme.of(context).colorScheme.onPrimary,

@@ -8,7 +8,7 @@ class IngredientUpgrade {
   }
 
   IngredientUpgrade._internal() {
-    _loadUpgrade(); // <-- Carga automática
+    _loadUpgrade();
   }
 
   int initialClickValue = 1;

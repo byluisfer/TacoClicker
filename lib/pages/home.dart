@@ -33,6 +33,8 @@ class TacoClick extends State<HomeScreen> {
       count += IngredientUpgrade().clickValue;
       prefs.setInt('counter', count);
     });
+
+    // print("You make $tacosPerClick tacos per click");
   }
 
   @override
@@ -48,13 +50,24 @@ class TacoClick extends State<HomeScreen> {
               color: Theme.of(context).colorScheme.primary,
               borderRadius: BorderRadius.all(Radius.circular(40)),
             ),
+            child: Column(
+              children: [
+                Text(
+                  '$count Tacos',
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onPrimary,
+                    fontSize: 24,
+                  ),
+                ),
+                Text(
+                  "${IngredientUpgrade().clickValue} per Click",
 
-            child: Text(
-              '$count Tacos',
-              style: TextStyle(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 24,
-              ),
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.onPrimary,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
             ),
           ),
 

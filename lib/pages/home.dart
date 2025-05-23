@@ -38,34 +38,38 @@ class TacoClick extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).scaffoldBackgroundColor,
-      child: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 60),
-            Container(
-              padding: const EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
-                borderRadius: BorderRadius.all(Radius.circular(40)),
-              ),
+      child: Column(
+        children: [
+          SizedBox(height: 60),
+          Container(
+            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.primary,
+              borderRadius: BorderRadius.all(Radius.circular(40)),
+            ),
 
-              child: Text(
-                '$count Tacos',
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onPrimary,
-                  fontSize: 24,
+            child: Text(
+              '$count Tacos',
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.onPrimary,
+                fontSize: 24,
+              ),
+            ),
+          ),
+
+          Expanded(
+            child: Center(
+              child: Bounceable(
+                onTap: _incrementClickCount,
+                duration: const Duration(milliseconds: 100),
+                child: Image.asset(
+                  'assets/Taco_No_Background.png',
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
-            SizedBox(height: 80),
-
-            Bounceable(
-              onTap: _incrementClickCount,
-              duration: const Duration(milliseconds: 100),
-              child: Image.asset('assets/Taco_No_Background.png', height: 380),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -68,237 +68,241 @@ class Settings extends State<SettingsScreen> {
     return Container(
       color: Theme.of(context).colorScheme.secondary,
       child: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 60),
-            Text(
-              AppLocalizations.of(context)!.settings,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 26,
-                color: Theme.of(context).colorScheme.onPrimary,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
+                AppLocalizations.of(context)!.settings,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            Container(
-              padding: const EdgeInsets.all(14),
-              width: 360,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onPrimary,
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppLocalizations.of(context)!.stats,
-                    style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+              SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.all(14),
+                width: 360,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppLocalizations.of(context)!.stats,
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 6),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Expanded(
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          padding: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Column(
-                            children: [
-                              Text(
-                                AppLocalizations.of(context)!.maxAmountStats,
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                    SizedBox(height: 6),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Expanded(
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 6),
+                            padding: EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Column(
+                              children: [
+                                Text(
+                                  AppLocalizations.of(context)!.maxAmountStats,
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                '0',
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
+                                Text(
+                                  '0',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          padding: EdgeInsets.all(8),
-                          margin: const EdgeInsets.symmetric(horizontal: 6),
-                          decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                AppLocalizations.of(context)!.perClickStats,
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                '0',
-                                style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.onPrimary,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(14),
-              width: 360,
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.onPrimary,
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppLocalizations.of(context)!.gameSettings,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.all(8),
+                            margin: const EdgeInsets.symmetric(horizontal: 6),
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).primaryColor,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  AppLocalizations.of(context)!.perClickStats,
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '0',
+                                  style: TextStyle(
+                                    color:
+                                        Theme.of(context).colorScheme.onPrimary,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        AppLocalizations.of(context)!.music,
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(14),
+                width: 360,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppLocalizations.of(context)!.gameSettings,
+                      style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
-                      Spacer(),
-                      Switch(
-                        value: isMusic,
-                        onChanged: (value) async {
-                          final prefs = await SharedPreferences.getInstance();
-                          setState(() {
-                            isMusic = value;
-                          });
-                          await prefs.setBool('isMusic', isMusic);
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          AppLocalizations.of(context)!.music,
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
+                        Spacer(),
+                        Switch(
+                          value: isMusic,
+                          onChanged: (value) async {
+                            final prefs = await SharedPreferences.getInstance();
+                            setState(() {
+                              isMusic = value;
+                            });
+                            await prefs.setBool('isMusic', isMusic);
 
-                          if (isMusic) {
-                            await backgroundPlayer.stop();
-                            await backgroundPlayer.setReleaseMode(
-                              ReleaseMode.loop,
-                            );
-                            await backgroundPlayer.setSource(
-                              AssetSource('backgroundMusic.mp3'),
-                            );
-                            await backgroundPlayer.resume();
-                          } else {
-                            await backgroundPlayer.stop();
-                          }
-                        },
-                        activeTrackColor: Theme.of(context).colorScheme.primary,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        AppLocalizations.of(context)!.darkMode,
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                      Spacer(),
-                      Switch(
-                        value: Theme.of(context).brightness == Brightness.dark,
-                        onChanged: (value) {
-                          ThemeNotifier themeNotifier =
-                              Provider.of<ThemeNotifier>(
-                                context,
-                                listen: false,
+                            if (isMusic) {
+                              await backgroundPlayer.stop();
+                              await backgroundPlayer.setReleaseMode(
+                                ReleaseMode.loop,
                               );
-                          themeNotifier.setTheme(
-                            value ? ThemeMode.dark : ThemeMode.light,
-                          );
-                        },
-                        activeTrackColor: Theme.of(context).colorScheme.primary,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        AppLocalizations.of(context)!.language,
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ),
-                      Spacer(),
-                      TextButton(
-                        onPressed: _toggleLanguage,
-                        style: TextButton.styleFrom(
-                          backgroundColor:
+                              await backgroundPlayer.setSource(
+                                AssetSource('backgroundMusic.mp3'),
+                              );
+                              await backgroundPlayer.resume();
+                            } else {
+                              await backgroundPlayer.stop();
+                            }
+                          },
+                          activeTrackColor:
                               Theme.of(context).colorScheme.primary,
                         ),
-                        child: Text(
-                          _currentLanguageCode.toUpperCase(),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          AppLocalizations.of(context)!.darkMode,
                           style: TextStyle(
-                            color: Theme.of(context).colorScheme.onPrimary,
+                            fontSize: 18,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
+                        Spacer(),
+                        Switch(
+                          value:
+                              Theme.of(context).brightness == Brightness.dark,
+                          onChanged: (value) {
+                            ThemeNotifier themeNotifier =
+                                Provider.of<ThemeNotifier>(
+                                  context,
+                                  listen: false,
+                                );
+                            themeNotifier.setTheme(
+                              value ? ThemeMode.dark : ThemeMode.light,
+                            );
+                          },
+                          activeTrackColor:
+                              Theme.of(context).colorScheme.primary,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          AppLocalizations.of(context)!.language,
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Theme.of(context).colorScheme.primary,
+                          ),
+                        ),
+                        Spacer(),
+                        TextButton(
+                          onPressed: _toggleLanguage,
+                          style: TextButton.styleFrom(
+                            backgroundColor:
+                                Theme.of(context).colorScheme.primary,
+                          ),
+                          child: Text(
+                            _currentLanguageCode.toUpperCase(),
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    TextButton(
+                      onPressed: () {
+                        resetGameData();
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 80,
+                          vertical: 10,
+                        ),
                       ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  TextButton(
-                    onPressed: () {
-                      resetGameData();
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.red,
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 80,
-                        vertical: 10,
+                      child: Text(
+                        AppLocalizations.of(context)!.restartGame,
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ),
-                    child: Text(
-                      AppLocalizations.of(context)!.restartGame,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
